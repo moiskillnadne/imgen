@@ -32,7 +32,7 @@ export const GenerationPage = () => {
         <div className="p-10">
           <div className="flex flex-col md:flex-row gap-5 justify-between items-center">
             <div className="flex flex-col gap-5">
-              {themes.map((theme, index) => (
+              {themes.map((theme) => (
                 <button
                   key={theme.type}
                   onClick={() => setSelectedTheme(theme.type as GenerationType)}

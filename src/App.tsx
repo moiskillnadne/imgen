@@ -1,5 +1,3 @@
-import type { Schema } from "../amplify/data/resource";
-import { generateClient } from "aws-amplify/data";
 import { Route, Routes } from "react-router";
 import { Background } from "./shared/Background";
 import { Home } from "./pages/Home";
@@ -10,7 +8,6 @@ import { Authenticator } from "@aws-amplify/ui-react";
 import { ProtectedRoute } from "./shared/ProtectedRoute";
 import { GenerationPage } from "./pages/Generation/index.tsx";
 
-const client = generateClient<Schema>();
 
 function App() {
   
