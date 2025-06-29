@@ -78,11 +78,10 @@ export const ProfilePage = () => {
             </p>
           </div>
 
-          {/* Generated Items */}
           {generatedItems.map((item) => (
             <div
               key={item.id}
-              onClick={() => handleItemClick(item)}
+              onClick={() => console.log('item')}
               className="aspect-square bg-white rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer overflow-hidden group"
             >
               <div className="h-full flex flex-col">
