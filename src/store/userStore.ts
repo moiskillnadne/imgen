@@ -2,12 +2,14 @@ import { create } from 'zustand';
 
 interface UserState {
   email: string | null;
-  setEmail: (email: string | null) => void;
+  userId: string | null;
+  setUser: (email: string | null, userId: string | null) => void;
   clear: () => void;
 }
 
 export const useUserStore = create<UserState>((set) => ({
   email: null,
-  setEmail: (email) => set({ email }),
-  clear: () => set({ email: null }),
+  userId: null,
+  setUser: (email, userId) => set({ email, userId }),
+  clear: () => set({ email: null, userId: null }),
 }));

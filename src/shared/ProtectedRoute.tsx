@@ -7,20 +7,21 @@ export const ProtectedRoute = () => {
   const {authStatus} = useAuthenticator(ctx => [ctx.authStatus]);
   const {user}       = useAuthenticator(ctx => [ctx.user]);
 
-  const setEmail = useUserStore(s => s.setEmail);
+  const setUser = useUserStore(s => s.setUser);
   const clear    = useUserStore(s => s.clear);
 
   useEffect(() => {
     if (authStatus === 'authenticated') {
       const email = user?.signInDetails?.loginId ?? null;
+      const userId = user?.userId ?? null;
 
       if (email !== useUserStore.getState().email) {
-        setEmail(email);
+        setUser(email, userId);
       }
     } else {
       clear()
     }
-  }, [authStatus, user, setEmail, clear]);
+  }, [authStatus, user, setUser, clear]);
 
   if (authStatus === 'configuring') return <p>Loading…</p>;
 

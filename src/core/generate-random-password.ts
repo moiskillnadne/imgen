@@ -28,6 +28,7 @@ export function generateRandomPassword(
   password += getRandomChar(lowercase);  // At least one lowercase
   password += getRandomChar(uppercase);  // At least one uppercase
   password += getRandomChar(numbers);    // At least one number
+  password += getRandomChar(specialChars); // At least one special character
 
   // Fill remaining length with random characters from full charset
   for (let i = 3; i < length; i++) {

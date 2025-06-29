@@ -1,7 +1,7 @@
 import { type ClientSchema, a, defineData } from "@aws-amplify/backend";
-import { UserSchema } from "./schema/UserSchema";
+import { GenerationsSchema } from "./schema/Generations";
 
-const schema = a.combine([UserSchema])
+const schema = a.combine([GenerationsSchema])
 
 export type Schema = ClientSchema<typeof schema>;
 
