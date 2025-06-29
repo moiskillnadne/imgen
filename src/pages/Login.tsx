@@ -3,11 +3,12 @@ import { useState } from "react";
 import { Header } from "../shared/Header";
 import { EmailInput } from "../shared/EmailInput";
 import { CodeInput } from "../shared/CodeInput";
+import { useNavigate } from "react-router";
 
 type Step = 'SEND_CODE' | 'CONFIRM_CODE';
 
 export const LoginPage = () => {
-
+  const router = useNavigate()
   const [step, setStep] = useState<Step>("SEND_CODE")
   const [email, setEmail] = useState('');
   const [code, setCode] = useState('');
@@ -48,7 +49,7 @@ export const LoginPage = () => {
 
     if (result.nextStep.signInStep === "DONE") {
       console.log('Login successful');
-      return
+      router('/profile')
     }
   }
 

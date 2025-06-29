@@ -13,9 +13,11 @@
     "@aws-amplify/ui-react": "^6.11.2",
     "@tailwindcss/vite": "^4.1.11",
     "aws-amplify": "^6.15.1",
+    "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
-    "react-router": "^7.6.3"
+    "react-router": "^7.6.3",
+    "zustand": "^5.0.6"
   },
   "devDependencies": {
     "@aws-amplify/backend": "^1.16.1",
